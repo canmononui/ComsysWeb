@@ -1,0 +1,16 @@
+
+body {
+  margin: auto;
+  padding: auto;
+}
+#head_box{
+  padding-left: 30%;
+  padding-right: 30%;
+  background-color: lightblue;
+}
+#head_left{
+  width: 450px;
+}
+#head_right{
+  width: 450px;
+}

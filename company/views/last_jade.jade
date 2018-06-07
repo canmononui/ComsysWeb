@@ -1,0 +1,78 @@
+head
+  title COMPANY
+  // Latest compiled and minified CSS
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  // jQuery library
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  // Latest compiled JavaScript
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+#head_box.container(style='margin-top: 1%')
+  .panel.panel-default
+    .panel-body
+      #head_left.col-sm-6
+        center
+          img.img-responsive(src='https://goo.gl/f9Zxny', width='450', height='178')
+      #head_right.col-sm-6
+        center
+          form(action='/last_jade' ,method='post')
+            table
+              tr
+                th
+                  h4 User :
+                th #{currentUsers.user}
+              tr
+                th
+                  h4 Name :
+                th #{currentUsers.name}
+              tr
+                th
+                  h4 Department :
+                th #{currentUsers.depart}
+              tr
+                th
+                th(style='text-align: right;')
+                  input(type='submit', value='Logout')
+  nav.navbar.navbar-default
+    .container
+      ul.nav.navbar-nav
+        li
+          a(href='home_jade') เวลาเข้า-ออกงาน
+        li
+          a(href='last_jade') ประวัติลางาน
+        li
+          a(href='report_jade') แจ้งลางาน
+  .panel.panel-default
+    .panel-heading
+      h3.panel-title ประวัติลางาน
+    .panel-body
+      table.table
+        tr
+          th ครั้งที่
+          th วันที่
+          th ประเภท
+          th หมายเหตุ
+        tr
+          th #{showlast.count1}
+          th #{showlast.date1}
+          th #{showlast.type1}
+          th #{showlast.note1}
+        tr
+          th #{showlast.count2}
+          th #{showlast.date2}
+          th #{showlast.type2}
+          th #{showlast.note2}
+        tr
+          th #{showlast.count3}
+          th #{showlast.date3}
+          th #{showlast.type3}
+          th #{showlast.note3}
+        tr
+          th #{showlast.count4}
+          th #{showlast.date4}
+          th #{showlast.type4}
+          th #{showlast.note4}
+        tr
+          th #{showlast.count5}
+          th #{showlast.date5}
+          th #{showlast.type5}
+          th #{showlast.note5}

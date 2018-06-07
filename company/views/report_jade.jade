@@ -1,0 +1,69 @@
+head
+  title COMPANY
+  // Latest compiled and minified CSS
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  // jQuery library
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  // Latest compiled JavaScript
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+#head_box.container(style='margin-top: 1%')
+  .panel.panel-default
+    .panel-body
+      #head_left.col-sm-6
+        center
+          img.img-responsive(src='https://goo.gl/f9Zxny', width='450', height='178')
+      #head_right.col-sm-6
+        center
+          form(action='/report_jade')
+            table
+              tr
+                th
+                  h4 User :
+                th #{currentUsers.user}
+              tr
+                th
+                  h4 Name :
+                th #{currentUsers.name}
+              tr
+                th
+                  h4 Department :
+                th #{currentUsers.depart}
+              tr
+                //th
+                //th(style='text-align: right;')
+                //  input(type='submit', value='Logout' required='')
+  nav.navbar.navbar-default
+    .container
+      ul.nav.navbar-nav
+        li
+          a(href='/home_jade') เวลาเข้า-ออกงาน
+        li
+          a(href='/last_jade') ประวัติลางาน
+        li
+          a(href='/report_jade') แจ้งลางาน
+  form(action='/report_jade' ,method='post')
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title แจ้งลางาน
+      .panel-body
+        table.table
+          tr
+            th วันที่
+            th
+              input(type='date', name='date')
+          tr
+            th
+            th
+              โปรดระบุประเภท Sick Leave, Holiday leave, Errand leave
+          tr
+            th ประเภท
+            th
+              input(type='text' ,name='type')
+          tr
+            th หมายเหตุ
+            th
+              input(type='text', name='note')
+          tr
+            th
+            th
+              input(type='submit', value='Submit', required='')
